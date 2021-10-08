@@ -27,9 +27,9 @@ def updateproxy():
 			proxy = "localhost"
 		else:
 			print(Fore.YELLOW+"I'm checking the proxy...")
-			ip = requests.get("https://flyzero.000webhostapp.com/project/ip6.php", verify=False, timeout=10).text
+			ip = requests.get("https://flyzero.000webhostapp.com/project/Ip6.php", verify=False, timeout=10).text
 			try:
-				ipx = requests.get("https://flyzero.000webhostapp.com/project/ip6.php", proxies={'http': "http://{}".format(proxy), 'https':"http://{}".format(proxy)}, verify=False, timeout=10).text
+				ipx = requests.get("https://flyzero.000webhostapp.com/project/Ip6.php", proxies={'http': "http://{}".format(proxy), 'https':"http://{}".format(proxy)}, verify=False, timeout=10).text
 			except:
 				ipx = ip
 			if ip != ipx:
